@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { hot } from 'react-hot-loader/root';
+import ImageLoader from './ImageLoader';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ImageLoader
+        sdImgSrc="http://hdwpro.com/wp-content/uploads/2016/12/Awesome-HD-Pic-380x250.jpg"
+        hdImgSrc="http://hdwpro.com/wp-content/uploads/2016/12/Awesome-HD-Pic.jpg"
+      />
+      <ImageLoader
+        sdImgSrc="https://cdn.wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-3-150x84.jpg"
+        hdImgSrc="https://wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-3.jpg"
+      />
+      <ImageLoader
+        sdImgSrc="https://cdn.wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-5-150x84.jpg"
+        hdImgSrc="https://cdn.wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-5.jpg"
+      />
     </div>
   );
-}
+};
 
-export default App;
+export default hot(App);
